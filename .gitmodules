@@ -1,3 +1,4 @@
 [submodule "lmdb-sys/lmdb"]
 	path = lmdb-sys/lmdb
 	url = https://github.com/meilisearch/lmdb
+	tag = MEILISEARCH_0.9.29
