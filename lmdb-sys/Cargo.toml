@@ -1,7 +1,6 @@
 [package]
 name = "lmdb-rkv-sys"
-# NB: When modifying, also modify html_root_url in lib.rs
-version = "0.12.0"
+version = "0.15.0"
 authors = ["Dan Burkert <dan@danburkert.com>", "Victor Porof <vporof@mozilla.com>"]
 license = "Apache-2.0"
 description = "Rust bindings for liblmdb."
@@ -11,6 +10,7 @@ repository = "https://github.com/mozilla/lmdb-rs.git"
 readme = "../README.md"
 keywords = ["LMDB", "database", "storage-engine", "bindings", "library"]
 categories = ["database", "external-ffi-bindings"]
+publish = false
 
 # NB: Use "--features bindgen" to generate bindings.
 build = "build.rs"
