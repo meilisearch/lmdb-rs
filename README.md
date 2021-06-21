@@ -6,6 +6,13 @@ Idiomatic and safe APIs for interacting with the
 This repo is a fork of [mozilla/lmdb-rs](https://github.com/mozilla/lmdb-rs)
 which is a fork of [danburkert/lmdb-rs](https://github.com/danburkert/lmdb-rs).
 
+## Why does it exist?
+
+The sole reason why this crate exists is because it fixes a memory issue in LMDB
+where LMDB was keeping a lot of pages and not freeing them. So we decided to fork it
+and add a new `MDB_ALWAYSFREEPAGES` flag to the `MDB_Env` struct. This flag now forces
+LMDB to always free single pages instead of keeping them in a list for future reuse.
+
 ## Building from Source
 
 ```bash
