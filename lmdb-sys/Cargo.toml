@@ -10,6 +10,7 @@ repository = "https://github.com/mozilla/lmdb-rs.git"
 readme = "../README.md"
 keywords = ["LMDB", "database", "storage-engine", "bindings", "library"]
 categories = ["database", "external-ffi-bindings"]
+publish = false
 
 # NB: Use "--features bindgen" to generate bindings.
 build = "build.rs"
