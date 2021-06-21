@@ -1,4 +1,4 @@
-name-template: 'MeiliSearch\'s lmdb-rs v$RESOLVED_VERSION'
+name-template: 'lmdb-rs for MeiliSearch v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 exclude-labels:
   - 'skip-changelog'
