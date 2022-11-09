@@ -31,7 +31,10 @@ impl ParseCallbacks for Callbacks {
             | "MDB_BAD_VALSIZE"
             | "MDB_BAD_DBI"
             | "MDB_PROBLEM"
-            | "MDB_LAST_ERRCODE" => Some(IntKind::Int),
+            | "MDB_LAST_ERRCODE"
+            | "MDB_BAD_CHECKSUM"
+            | "MDB_CRYPTO_FAIL"
+            | "MDB_ENV_ENCRYPTION" => Some(IntKind::Int),
             "MDB_SIZE_MAX" | "MDB_PROBLEM" => Some(IntKind::ULongLong),
             _ => Some(IntKind::UInt),
         }
