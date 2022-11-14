@@ -59,7 +59,9 @@ fn main() {
         warn!("Building with `-fsanitize=fuzzer`.");
     }
 
-    if !pkg_config::find_library("lmdb").is_ok() {
+    let vendored = cfg!(feature = "vendored");
+
+    if vendored || pkg_config::find_library("lmdb").is_err() {
         let mut builder = cc::Build::new();
 
         builder
