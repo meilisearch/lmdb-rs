@@ -13,12 +13,28 @@ where LMDB was keeping a lot of pages and not freeing them. So we decided to for
 and add a new `MDB_ALWAYSFREEPAGES` flag to the `MDB_Env` struct. This flag now forces
 LMDB to always free single pages instead of keeping them in a list for future reuse.
 
+## Vendoring
+
+By default, if LMDB is installed on the system, this crate will attempt to make use of the system-available LMDB.
+
+To force installation from source, build this crate with the `vendored` feature.
+
 ## Building from Source
+
+### Using the system LMDB if available
 
 ```bash
 git clone --recursive git@github.com:meilisearch/lmdb-rs.git
 cd lmdb-rs
 cargo build
+```
+
+### Always vendoring
+
+```bash
+git clone --recursive git@github.com:meilisearch/lmdb-rs.git
+cd lmdb-rs
+cargo build --features vendored
 ```
 
 ## Publishing to crates.io
