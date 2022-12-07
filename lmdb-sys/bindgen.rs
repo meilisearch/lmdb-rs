@@ -32,7 +32,7 @@ impl ParseCallbacks for Callbacks {
             | "MDB_BAD_DBI"
             | "MDB_PROBLEM"
             | "MDB_LAST_ERRCODE" => Some(IntKind::Int),
-            "MDB_SIZE_MAX" | "MDB_PROBLEM" => Some(IntKind::ULongLong),
+            "MDB_SIZE_MAX" => Some(IntKind::ULongLong),
             _ => Some(IntKind::UInt),
         }
     }
