@@ -33,6 +33,7 @@ bindgen = { version = "0.53.2", default-features = false, optional = true, featu
 [features]
 default = []
 vendored = []
+posix-sem = ["vendored",]
 with-asan = ["vendored",]
 with-fuzzer = ["vendored",]
 with-fuzzer-no-link = ["vendored",]
