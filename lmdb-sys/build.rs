@@ -73,6 +73,10 @@ fn main() {
             .flag_if_supported("-Wbad-function-cast")
             .flag_if_supported("-Wuninitialized");
 
+        if cfg!(feature = "posix-sem") {
+            builder.define("MDB_USE_POSIX_SEM", None);
+        }
+
         if env::var("CARGO_FEATURE_WITH_ASAN").is_ok() {
             builder.flag("-fsanitize=address");
         }

@@ -54,6 +54,7 @@ tempdir = "0.3"
 [features]
 default = []
 vendored = ["lmdb-rkv-sys/vendored"]
+posix-sem = ["lmdb-rkv-sys/posix-sem"]
 with-asan = ["lmdb-rkv-sys/with-asan"]
 with-fuzzer = ["lmdb-rkv-sys/with-fuzzer"]
 with-fuzzer-no-link = ["lmdb-rkv-sys/with-fuzzer-no-link"]
